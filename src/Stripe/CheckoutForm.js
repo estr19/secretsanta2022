@@ -45,9 +45,9 @@ export const CheckoutForm = () => {
         // setMessageSuccess(false);
         const MySwal = alert(Swal);
         MySwal.fire({
+          icon: 'error',
           title: <strong>Your payment was declined.</strong>,
-          cancelButtonText: 'Please make sure you enter valid card number, CVV number, expiration date and zip-code.',
-          icon: 'error'
+          text: 'Please make sure you enter valid card number, CVV number, expiration date and zip-code.',
         })
       }
     } else {
