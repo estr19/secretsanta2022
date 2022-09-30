@@ -7,7 +7,7 @@ import alert from 'sweetalert2-react-content'
 export const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const [messageSuccess, setMessageSuccess] = useState(false);
+  // const [messageSuccess, setMessageSuccess] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -31,7 +31,7 @@ export const CheckoutForm = () => {
         console.log("Stripe 35 | data", response.data.success);
         if (response.data.success) {
           console.log("CheckoutForm.js 25 | payment successful!");
-          setMessageSuccess(true);
+          // setMessageSuccess(true);
           const MySwal = alert(Swal);
           MySwal.fire({
             title: <strong>Thank you for your purchase!</strong>,
@@ -42,7 +42,7 @@ export const CheckoutForm = () => {
         }
       } catch (error) {
         console.log("CheckoutForm.js 28 | ", error);
-        setMessageSuccess(false);
+        // setMessageSuccess(false);
         const MySwal = alert(Swal);
         MySwal.fire({
           title: <strong>Your payment was declined.</strong>,
