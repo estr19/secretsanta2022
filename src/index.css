@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Poppins&display=swap');
 
 body {
   background-image: url('https://images.unsplash.com/photo-1545608444-f045a6db6133?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80');
@@ -7,6 +7,7 @@ body {
   background-position: center;
   height: 100vh;
   margin: 0;
+  font-family: 'Alkalami', serif;
 }
 
 .app {
@@ -27,7 +28,6 @@ body {
 }
 
 h1 {
-  font-family: 'Alkalami', serif;
   font-size: 4em;
   font-weight: 300;
   margin: .5em 0 0;
@@ -40,15 +40,16 @@ img, button, .profile {
 button {
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   cursor: pointer;
   background-color: #a22c34;
   border: 2px solid #bfbfbf;
   color: #ffffff;
   padding: 0.75em;
-  text-align: center;
-  margin: 0.5em;
+  margin: 1em;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
   font-size: large;
 }
 
@@ -58,4 +59,26 @@ button {
   padding: 1em;
   text-align: center;
   width: 75%;
+}
+
+.payment {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.StripeElement.StripeElement--empty {
+  background-color: hsla(0,100%,90%,.75);
+  padding: .5em;
+  border-radius: .5em;
+}
+
+.StripeElement.StripeElement--complete {
+  background-color: hsla(120,100%,90%,.75);
+  padding: .5em;
+  border-radius: .5em;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
 }

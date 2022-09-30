@@ -11,7 +11,7 @@ const Login = () => {
         </div>
         <div className='center profile'>
           <h1>Welcome to Bookdemic Secret Santa - 2022!</h1>
-          <h3>It's an annual tradition for Bookdemic club members to exchange gifts around New Year's. To keep things interesting, we draw random people to give a present.</h3>
+          <h3>It's an annual tradition for Bookdemic club members to exchange gifts around Christmas time. To keep things interesting, we sign up and draw a random person to give the present.</h3>
         </div>
       </div>
     )
