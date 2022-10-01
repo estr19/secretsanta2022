@@ -83,8 +83,8 @@ p {
   font-family: 'Poppins', sans-serif;
 }
 
-@media all and (max-width: 500px) {
+/* @media all and (max-width: 500px) {
   html {
     font-size: 10px;
   }
-}
+} */
