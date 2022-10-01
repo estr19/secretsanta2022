@@ -5,7 +5,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   height: 100vh;
   margin: 0;
   font-family: 'Alkalami', serif;
@@ -88,36 +87,4 @@ p {
   html {
     font-size: 10px;
   }
-
-  /* img {
-    width: 110px;
-    height: auto;
-  }
-
-  .top {
-    justify-content: flex-start;
-  }
-
-  .gradient-text {
-    background-size: 100%;
-  }
-
-  .slideshow {
-    width: 95%;
-  }
-
-  .item {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 155px;
-  }
-
-  textarea {
-    width: 100%;
-  }
-
-  #form {
-    width: 90%;
-  } */
 }
