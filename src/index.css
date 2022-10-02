@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&family=Poppins&display=swap');
-
 body {
   background-image: url('https://images.unsplash.com/photo-1545608444-f045a6db6133?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  font-family: 'Alkalami', serif;
 }
 
 .app {
@@ -27,44 +24,15 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-size: 4em;
-  font-weight: 300;
-  margin: .5em 0 0;
-}
-
-img, button, .profile {
-  border-radius: 1em;
-}
-
-button {
+.button {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  cursor: pointer;
-  background-color: #a22c34;
-  border: 2px solid #bfbfbf;
-  color: #ffffff;
-  padding: 0.75em;
-  margin: 1em;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: large;
 }
 
 .profile {
   background-color: hsla(0,0%,98%,.8);
-  margin: 2em;
-  padding: 1em;
-  text-align: center;
-  width: 75%;
-}
-
-.payment {
-  display: flex;
-  flex-direction: column;
-  width: 300px;
+  border-radius: 1em;
 }
 
 .StripeElement.StripeElement--empty {
@@ -78,13 +46,3 @@ button {
   padding: .5em;
   border-radius: .5em;
 }
-
-p {
-  font-family: 'Poppins', sans-serif;
-}
-
-/* @media all and (max-width: 500px) {
-  html {
-    font-size: 10px;
-  }
-} */

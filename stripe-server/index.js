@@ -1,4 +1,5 @@
 const express = require("express");
+const bootstrap = require('bootstrap');
 const app = express();
 require("dotenv").config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST);

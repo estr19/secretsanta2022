@@ -7,7 +7,6 @@ import alert from 'sweetalert2-react-content'
 export const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  // const [messageSuccess, setMessageSuccess] = useState(false);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -30,8 +29,17 @@ export const CheckoutForm = () => {
 
         console.log("Stripe 35 | data", response.data.success);
         if (response.data.success) {
-          console.log("CheckoutForm.js 25 | payment successful!");
-          // setMessageSuccess(true);
+          // console.log("CheckoutForm.js 25 | payment successful!");
+          // <div class="modal modal-tour position-static d-block bg-secondary py-5" tabindex="-1" role="dialog" id="modalTour">
+          //   <div class="modal-dialog" role="document">
+          //     <div class="modal-content rounded-4 shadow">
+          //       <div class="modal-body p-5">
+          //         <h2 class="fw-bold mb-0">Thank you for your purchase!</h2>
+          //         <button type="button" class="btn btn-lg btn-primary mt-5 w-100" data-bs-dismiss="modal">You will get a confirmation email shortly.</button>
+          //       </div>
+          //     </div>
+          //   </div>
+          // </div>
           const MySwal = alert(Swal);
           MySwal.fire({
             title: <strong>Thank you for your purchase!</strong>,
@@ -42,7 +50,6 @@ export const CheckoutForm = () => {
         }
       } catch (error) {
         console.log("CheckoutForm.js 28 | ", error);
-        // setMessageSuccess(false);
         const MySwal = alert(Swal);
         MySwal.fire({
           icon: 'error',
@@ -56,10 +63,10 @@ export const CheckoutForm = () => {
   };
 
   return (
-    <form className='payment' id='showPayment' onSubmit={handleSubmit} style={{display: 'none'}}>
+    <form className="mt-4" id='showPayment' onSubmit={handleSubmit} style={{display: 'none'}}>
       <CardElement />
-      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-        <button style={{padding: '0.75em 1.25em'}}>Pay</button>
+      <div className="container">
+        <button onClick={() => document.getElementById('cartTotal').style.display = "none"} className="btn btn-success btn-lg px-4 mt-4">Place Your Order</button>
       </div>
     </form>
   );

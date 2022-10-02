@@ -11,20 +11,40 @@ const MyAccount = () => {
         x.style.display = "block";
         y.style.display = "none";
       }
-      // else {
-      //   x.style.display = "none";
-      // }
   }
+
   return(
     isAuthenticated && (
-    <div style={{width: 'max-content'}} className='profile center'>
+    <div className='profile p-4'>
       <br></br>
-      <img src={user.picture} alt={user.name} />
-      <h2>Hello, {user.given_name} {user.family_name}!</h2>
-      <p><b>Your email:</b> {user.email}</p>
-      <p>Secret Santa participation fee: <b>$5.00</b></p>
-      <button id='purchaseNow' onClick={() => showPayment()}>Purchase Now</button>
-      <StripeContainer />
+      <div className="container">
+        <div className="lg-4">
+          <img className="bd-placeholder-img rounded-circle" src={user.picture} alt={user.name} />
+          <h2 className="fw-normal">Hello, {user.given_name} {user.family_name}!</h2>
+          <p><b>Email:</b> {user.email}</p>
+          <div id="cartTotal">
+            <ul className="list-group mb-3">
+              <li className="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 className="my-0">Entry fee</h6>
+                </div>
+                <span className="text-muted">$4</span>
+              </li><li className="list-group-item d-flex justify-content-between lh-sm">
+                <div>
+                  <h6 className="my-0">Card processing fee</h6>
+                </div>
+                <span className="text-muted">$1</span>
+              </li>
+              <li className="list-group-item d-flex justify-content-between">
+                <span>Total (USD)</span>
+                <strong>$5</strong>
+              </li>
+            </ul>
+          </div>
+          <button className="btn btn-success btn-lg mt-3" id='purchaseNow' onClick={() => showPayment()}>Purchase Now</button>
+          <StripeContainer />
+        </div>
+      </div>
     </div>
   ))
 }
